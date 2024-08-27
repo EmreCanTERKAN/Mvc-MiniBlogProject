@@ -1,0 +1,18 @@
+﻿@model BlogPost
+
+<h2>Yeni Blog Gönderisi</h2>
+<p>Şu An Ki Zaman: @ViewBag.CurrentTime</p>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Title">Başlık</label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Contant">İçerik</label>
+        <textarea asp-for="Contant" class="form-control" rows="5"></textarea>
+        <span asp-validation-for="Contant" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Gönder</button>
+</form>

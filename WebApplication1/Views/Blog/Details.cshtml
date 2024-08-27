@@ -1,0 +1,15 @@
+﻿@model BlogPost
+
+<h2>@Model.Title</h2>
+
+<p>
+    @Model.Contant
+</p>
+
+<p>
+    <small>
+        Oluşturulma Tarihi : @Model.CreatedAt (@ViewData["CreateAgo"])
+    </small>
+</p>
+
+<a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
